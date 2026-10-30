@@ -1,0 +1,46 @@
+:root {
+  /* Primario: morado */
+  --bs-primary: #6e256e;
+  --bs-primary-rgb: 110, 37, 110;
+
+  /* Color Secundario: naranja */
+  --bs-secondary: #aa6c39;
+  --bs-secondary-rgb: 170, 108, 57;
+
+  /*Color Terciario*/
+  --color-azul: #2e4172;
+
+  --bs-link-color: #6e256e;
+}
+.btn-primary {
+  --bs-btn-bg: #6e256e;
+  --bs-btn-border-color: #6e256e;
+  --bs-btn-hover-bg: #4f1a52; /* un tono más oscuro del morado */
+  --bs-btn-hover-border-color: #4f1a52;
+  --bs-btn-active-bg: #3a1340;
+  --bs-btn-active-border-color: #3a1340;
+}
+
+.btn-secondary {
+  --bs-btn-bg: #804f28;
+  --bs-btn-border-color: #804f28;;
+  --bs-btn-hover-bg: #804f28; /* un tono más oscuro del naranja */
+  --bs-btn-hover-border-color: #804f28;
+}
+
+/*Le subimos un poco la opacidad a los enlaces del navbar*/
+.navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: rgba(255, 255, 255, 0.7);   /* por defecto es 0.55 */
+}
+
+.card-terciaria {
+  background-color: var(--color-azul);
+  color: white;
+  border-color: var(--color-azul);
+}
+
+.text-naranja {
+  color: var(--bs-secondary);
+}
+
+
