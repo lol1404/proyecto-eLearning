@@ -44,8 +44,27 @@
   border-color: var(--color-azul);
 }
 
+.tutor-carousel {
+  max-width: 1020px;
+  margin-inline: auto;
+}
+
+.tutor-card-body {
+  height: 7rem;
+}
+
+@media (max-width: 767.98px) {
+  .tutor-card-body {
+    height: 8rem;
+  }
+}
+
 .text-naranja {
   color: var(--bs-secondary);
+}
+
+.text-azul {
+  color: var(--color-azul);
 }
 
 /* Fuente general */

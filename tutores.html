@@ -14,17 +14,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/estilos.css" rel="stylesheet" />
   </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body>
     <div class="container-fluid">
       <nav
-        class="navbar navbar-expand-lg bg-primary rounded mt-2"
+        class="navbar navbar-expand-lg bg-primary rounded"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Ejercicio 1</a>
+          <a class="navbar-brand" href="Landing_Page.html">Learnova</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,10 +46,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="Landing_Page.html"
+                <a class="nav-link" aria-current="page" href="Landing_Page.html"
                   >Inicio</a
                 >
               </li>
@@ -50,12 +54,11 @@
                 <a class="nav-link" href="cursos.html">Cursos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="tutores.html">Tutores</a>
+                <a class="nav-link active" href="tutores.html">Tutores</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
-
             </ul>
             <form class="d-flex" role="search">
               <input
@@ -79,7 +82,11 @@
       </h2>
 
       <div class="container mt-3">
-        <div id="carrusel" class="carousel slide" data-bs-wrap="false">
+        <div
+          id="carrusel"
+          class="carousel slide tutor-carousel"
+          data-bs-wrap="false"
+        >
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row g-3 p-2 align-items-stretch">
@@ -94,7 +101,7 @@
                         alt="Foto de Fabio"
                       />
                     </div>
-                    <div class="card-body">
+                    <div class="card-body tutor-card-body">
                       <h3 class="card-title h5 text-white mb-2">Fabio</h3>
                       <p class="card-text">
                         Experto en Informática, bueno "experto", su mayor logro:
@@ -114,7 +121,7 @@
                         alt="Foto de Rubén"
                       />
                     </div>
-                    <div class="card-body">
+                    <div class="card-body tutor-card-body">
                       <h3 class="card-title h5 text-white mb-2">Rubén</h3>
                       <p class="card-text">
                         Chico normal y todólogo cualificado, más te vale que
@@ -139,7 +146,7 @@
                         alt="Foto de Chema"
                       />
                     </div>
-                    <div class="card-body">
+                    <div class="card-body tutor-card-body">
                       <h3 class="card-title h5 text-white mb-2">Chema</h3>
                       <p class="card-text">
                         Experto en JOJO'S y pesca sin agua. Juega a balatro en
@@ -159,7 +166,7 @@
                         alt="Foto de Rubén Gordillo"
                       />
                     </div>
-                    <div class="card-body">
+                    <div class="card-body tutor-card-body">
                       <h3 class="card-title h5 text-white mb-2">
                         Rubén Gordillo
                       </h3>
@@ -181,12 +188,19 @@
               data-bs-target="#carrusel"
               data-bs-slide="prev"
             >
-              <img
-                src="iconos/arrow-left-circle.svg"
-                alt="Volver"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="30"
                 height="30"
-              />
+                fill="currentColor"
+                class="bi bi-arrow-left-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+                />
+              </svg>
             </button>
             <button
               type="button"
@@ -194,12 +208,19 @@
               data-bs-target="#carrusel"
               data-bs-slide="next"
             >
-              <img
-                src="iconos/arrow-right-circle.svg"
-                alt="Siguiente"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="30"
                 height="30"
-              />
+                fill="currentColor"
+                class="bi bi-arrow-right-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -208,9 +229,7 @@
       <div class="container-fluid mt-3">
         <div class="row g-4">
           <section class="col-12 col-lg-7">
-            <h2 class=" text-naranja py-3 px-0 mb-1">
-              Solicita una clase:
-            </h2>
+            <h2 class="text-naranja py-3 px-0 mb-1">Solicita una clase:</h2>
 
             <div class="row g-3 mb-3">
               <div class="subtitulo col-12 col-md-6">
@@ -244,14 +263,20 @@
               </div>
 
               <div class="subtitulo col-12 col-md-6">
-                <label for="selectClase" class="form-label">Tipo de Clase:</label>
+                <label for="selectClase" class="form-label"
+                  >Tipo de Clase:</label
+                >
                 <select class="form-select" id="selectClase">
                   <option selected>Selecciona una opción</option>
                   <option value="1">Acceso a Datos</option>
-                  <option value="2">Programación de dispositivos Móviles</option>
+                  <option value="2">
+                    Programación de dispositivos Móviles
+                  </option>
                   <option value="3">Desarrollo de Interfaces</option>
                   <option value="4">Sistemas de Gestión Empresarial</option>
-                  <option value="5">Programación de Servicios y Procesos</option>
+                  <option value="5">
+                    Programación de Servicios y Procesos
+                  </option>
                 </select>
               </div>
 
@@ -275,6 +300,64 @@
 
           <section class="col-12 col-lg-5">
             <h2 class="text-naranja py-3 px-0 mb-1">Información de Contacto</h2>
+            <div class="d-flex flex-column gap-3 ms-3">
+              <div class="d-flex align-items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-envelope"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                  />
+                </svg>
+                <div>
+                  <p class="mb-1 text-azul fw-bold">Email</p>
+                  <p class="mb-0">learnova@gmail.com</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                <div>
+                  <p class="mb-1 text-azul fw-bold">Teléfono</p>
+                  <p class="mb-0">+34 912 123 456</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-geo"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"
+                  />
+                </svg>
+                <div>
+                  <p class="mb-1 text-azul fw-bold">Dirección</p>
+                  <p class="mb-0">Calle Principal 123, Sevilla, España</p>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
