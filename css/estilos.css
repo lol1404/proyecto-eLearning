@@ -12,6 +12,11 @@
 
   --bs-link-color: #6e256e;
 }
+
+.bg-azul {
+  background-color: var(--color-azul);
+}
+
 .btn-primary {
   --bs-btn-bg: #6e256e;
   --bs-btn-border-color: #6e256e;
@@ -42,5 +47,3 @@
 .text-naranja {
   color: var(--bs-secondary);
 }
-
-
