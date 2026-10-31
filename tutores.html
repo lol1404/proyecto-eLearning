@@ -47,18 +47,15 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="CAMBIAR">Comunicaciones</a>
+                <a class="nav-link" href="cursos.html">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tutores.html">Tutores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="CAMBIAR">Ventas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="CAMBIAR">Sobre nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="CAMBIAR">Contacto</a>
-              </li>
             </ul>
             <form class="d-flex" role="search">
               <input
@@ -208,36 +205,77 @@
         </div>
       </div>
 
-      <div class="container-fluid">
-        <h2 class="text-naranja rounded p-3 mb-1 mt-3">Solicita una clase:</h2>
-      </div>
+      <div class="container-fluid mt-3">
+        <div class="row g-4">
+          <section class="col-12 col-lg-7">
+            <h2 class=" text-naranja py-3 px-0 mb-1">
+              Solicita una clase:
+            </h2>
 
-      <div class="container-fluid mt-1">
-        <div class="row mb-3">
-          <label for="nombre" class="col-sm-1 col-form-label text-sm-end"
-            >Nombre:
-          </label>
-          <div class="col-lg-3">
-            <input
-              type="text"
-              class="form-control"
-              id="nombre"
-              placeholder="Nombre completo"
-            />
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label for="Email" class="col-sm-1 col-form-label text-sm"
-            >Email:
-          </label>
-          <div class="col-lg-3">
-            <input
-              type="text"
-              class="form-control"
-              id="Telefono"
-              placeholder="Telefono"
-            />
-          </div>
+            <div class="row g-3 mb-3">
+              <div class="subtitulo col-12 col-md-6">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Nombre completo"
+                />
+              </div>
+
+              <div class="subtitulo col-12 col-md-6">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+
+              <div class="subtitulo col-12 col-md-6">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefono"
+                  placeholder="Teléfono"
+                />
+              </div>
+
+              <div class="subtitulo col-12 col-md-6">
+                <label for="selectClase" class="form-label">Tipo de Clase:</label>
+                <select class="form-select" id="selectClase">
+                  <option selected>Selecciona una opción</option>
+                  <option value="1">Acceso a Datos</option>
+                  <option value="2">Programación de dispositivos Móviles</option>
+                  <option value="3">Desarrollo de Interfaces</option>
+                  <option value="4">Sistemas de Gestión Empresarial</option>
+                  <option value="5">Programación de Servicios y Procesos</option>
+                </select>
+              </div>
+
+              <div class="subtitulo col-12">
+                <label for="areaTextoClase" class="form-label">Mensaje:</label>
+                <textarea
+                  class="form-control"
+                  placeholder="Escribe tu mensaje"
+                  id="areaTextoClase"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="button" class="btn btn-secondary">
+                  Enviar Mensaje
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="col-12 col-lg-5">
+            <h2 class="text-naranja py-3 px-0 mb-1">Información de Contacto</h2>
+          </section>
         </div>
       </div>
 
