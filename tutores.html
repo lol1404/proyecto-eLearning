@@ -16,14 +16,11 @@
     />
     <link href="css/estilos.css" rel="stylesheet" />
   </head>
+
   <body class="d-flex flex-column min-vh-100">
     <div class="container-fluid">
-      <h2 class="text-center bg-primary text-white rounded p-3 mb-3">
-        Nuestros tutores
-      </h2>
-
       <nav
-        class="navbar navbar-expand-lg bg-secondary rounded mt-2"
+        class="navbar navbar-expand-lg bg-primary rounded mt-2"
         data-bs-theme="dark"
       >
         <div class="container-fluid">
@@ -70,13 +67,19 @@
                 placeholder="Buscar"
                 aria-label="Buscar"
               />
-              <button class="btn btn-secondary rounded" type="submit">
+              <button class="btn btn-primary rounded" type="submit">
                 Buscar
               </button>
             </form>
           </div>
         </div>
       </nav>
+    </div>
+
+    <div class="container-fluid">
+      <h2 class="text-center bg-secondary text-white rounded p-3 mb-3">
+        Nuestros tutores
+      </h2>
 
       <div class="container mt-3">
         <div id="carrusel" class="carousel slide" data-bs-wrap="false">
@@ -97,7 +100,8 @@
                     <div class="card-body">
                       <h3 class="card-title h5 text-white mb-2">Fabio</h3>
                       <p class="card-text">
-                        Experto en Informática. Te ayuda con tus clases y dudas.
+                        Experto en Informática, bueno "experto", su mayor logro:
+                        llegar a naneinf en balatro.
                       </p>
                     </div>
                   </article>
@@ -116,7 +120,8 @@
                     <div class="card-body">
                       <h3 class="card-title h5 text-white mb-2">Rubén</h3>
                       <p class="card-text">
-                        Tutor de Inglés y todólogo cualificado. ¡Consúltale!
+                        Chico normal y todólogo cualificado, más te vale que
+                        aprendas JAVA si quieres hablar con él.
                       </p>
                     </div>
                   </article>
@@ -140,8 +145,8 @@
                     <div class="card-body">
                       <h3 class="card-title h5 text-white mb-2">Chema</h3>
                       <p class="card-text">
-                        Experto en JOJO'S y pesca sin agua. Te ayuda con tus
-                        builds.
+                        Experto en JOJO'S y pesca sin agua. Juega a balatro en
+                        vez de atender, un GRANDE.
                       </p>
                     </div>
                   </article>
@@ -162,7 +167,8 @@
                         Rubén Gordillo
                       </h3>
                       <p class="card-text">
-                        Sabe Java, Python y PLSQL. ¡Pregúntale lo que necesites!
+                        Nadie sabe que sepa algo solo sabemos que no sabe nada y
+                        que sabe demasiado.
                       </p>
                     </div>
                   </article>
@@ -178,7 +184,12 @@
               data-bs-target="#carrusel"
               data-bs-slide="prev"
             >
-              <img src="iconos/arrow-left-circle.svg" alt="Volver" />
+              <img
+                src="iconos/arrow-left-circle.svg"
+                alt="Volver"
+                width="30"
+                height="30"
+              />
             </button>
             <button
               type="button"
@@ -186,7 +197,12 @@
               data-bs-target="#carrusel"
               data-bs-slide="next"
             >
-              <img src="iconos/arrow-right-circle.svg" alt="Siguiente" class="rounded" />
+              <img
+                src="iconos/arrow-right-circle.svg"
+                alt="Siguiente"
+                width="30"
+                height="30"
+              />
             </button>
           </div>
         </div>
