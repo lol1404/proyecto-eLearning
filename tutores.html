@@ -25,13 +25,10 @@
   </head>
 
   <body class="d-flex flex-column min-vh-100">
-    <div>
-      <nav
-        class="navbar navbar-expand-lg bg-primary mt-2"
-        data-bs-theme="dark"
-      >
+    <header>
+      <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="Landing_Page.html">
             <h3 class="text-white">
               Learnova
               <svg
@@ -89,7 +86,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input
-                class="form-control me-2 bg-white"
+                class="form-control me-2 bg-white buscador-navbar"
                 type="search"
                 placeholder="Buscar"
                 aria-label="Buscar"
@@ -112,119 +109,109 @@
           </div>
         </div>
       </nav>
-    </div>
+    </header>
 
-    <div class="container-fluid">
+    <main class="container-fluid">
       <h2 class="text-center bg-secondary text-white rounded p-3">
         Nuestros tutores
       </h2>
 
-      <div class="container mt-3">
+      <div class="container-fluid mt-3">
         <div
-          id="carrusel"
-          class="carousel slide tutor-carousel"
+          id="tutorGallery"
+          class="carousel slide tutor-carousel tutor-gallery"
           data-bs-wrap="false"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="row g-3 p-2 align-items-stretch">
-                <div class="col-12 col-md-6 d-flex">
-                  <article
-                    class="card card-terciaria w-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
-                  >
-                    <div class="ratio ratio-4x3">
-                      <img
-                        src="img/imgTutor1.png"
-                        class="object-fit-contain bg-body-secondary"
-                        alt="Foto de Fabio"
-                      />
-                    </div>
-                    <div class="card-body tutor-card-body">
-                      <h3 class="card-title h5 text-white mb-2">Fabio</h3>
-                      <p class="card-text">
-                        Experto en Informática, bueno "experto", su mayor logro:
-                        llegar a naneinf en balatro.
-                      </p>
-                    </div>
-                  </article>
+              <article
+                class="card card-terciaria h-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="img/imgTutor1.png"
+                    class="object-fit-contain bg-body-secondary"
+                    alt="Foto de Fabio"
+                  />
                 </div>
-                <div class="col-12 col-md-6 d-flex">
-                  <article
-                    class="card card-terciaria w-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
-                  >
-                    <div class="ratio ratio-4x3">
-                      <img
-                        src="img/imgTutor1.png"
-                        class="object-fit-contain bg-body-secondary"
-                        alt="Foto de Rubén"
-                      />
-                    </div>
-                    <div class="card-body tutor-card-body">
-                      <h3 class="card-title h5 text-white mb-2">Rubén</h3>
-                      <p class="card-text">
-                        Chico normal y todólogo cualificado, más te vale que
-                        aprendas JAVA si quieres hablar con él.
-                      </p>
-                    </div>
-                  </article>
+                <div class="card-body tutor-card-body">
+                  <h3 class="card-title h5 text-white mb-2">Fabio</h3>
+                  <p class="card-text">
+                    Experto en Informática, bueno "experto", su mayor logro:
+                    llegar a naneinf en balatro.
+                  </p>
                 </div>
-              </div>
+              </article>
             </div>
-
             <div class="carousel-item">
-              <div class="row g-3 p-2 align-items-stretch">
-                <div class="col-12 col-md-6 d-flex">
-                  <article
-                    class="card card-terciaria w-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
-                  >
-                    <div class="ratio ratio-4x3">
-                      <img
-                        src="img/imgTutor1.png"
-                        class="object-fit-contain bg-body-secondary"
-                        alt="Foto de Chema"
-                      />
-                    </div>
-                    <div class="card-body tutor-card-body">
-                      <h3 class="card-title h5 text-white mb-2">Chema</h3>
-                      <p class="card-text">
-                        Experto en JOJO'S y pesca sin agua. Juega a balatro en
-                        vez de atender, un GRANDE.
-                      </p>
-                    </div>
-                  </article>
+              <article
+                class="card card-terciaria h-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="img/imgTutor1.png"
+                    class="object-fit-contain bg-body-secondary"
+                    alt="Foto de Rubén"
+                  />
                 </div>
-                <div class="col-12 col-md-6 d-flex">
-                  <article
-                    class="card card-terciaria w-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
-                  >
-                    <div class="ratio ratio-4x3">
-                      <img
-                        src="img/imgTutor1.png"
-                        class="object-fit-contain bg-body-secondary"
-                        alt="Foto de Rubén Gordillo"
-                      />
-                    </div>
-                    <div class="card-body tutor-card-body">
-                      <h3 class="card-title h5 text-white mb-2">
-                        Rubén Gordillo
-                      </h3>
-                      <p class="card-text">
-                        Nadie sabe que sepa algo solo sabemos que no sabe nada y
-                        que sabe demasiado.
-                      </p>
-                    </div>
-                  </article>
+                <div class="card-body tutor-card-body">
+                  <h3 class="card-title h5 text-white mb-2">Rubén</h3>
+                  <p class="card-text">
+                    Chico normal y todólogo cualificado, aprende JAVA si quieres
+                    hablar con él.
+                  </p>
                 </div>
-              </div>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article
+                class="card card-terciaria h-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="img/imgTutor1.png"
+                    class="object-fit-contain bg-body-secondary"
+                    alt="Foto de Chema"
+                  />
+                </div>
+                <div class="card-body tutor-card-body">
+                  <h3 class="card-title h5 text-white mb-2">Chema</h3>
+                  <p class="card-text">
+                    Experto en JOJO'S y pesca sin agua. Juega a balatro en vez de
+                    atender, un GRANDE.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article
+                class="card card-terciaria h-100 overflow-hidden border border-primary border-opacity-25 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="img/imgTutor1.png"
+                    class="object-fit-contain bg-body-secondary"
+                    alt="Foto de Rubén Gordillo"
+                  />
+                </div>
+                <div class="card-body tutor-card-body">
+                  <h3 class="card-title h5 text-white mb-2">Rubén Gordillo</h3>
+                  <p class="card-text">
+                    Nadie sabe que sepa algo solo sabemos que no sabe nada y que
+                    sabe demasiado.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
 
-          <div class="d-flex justify-content-center gap-2 mt-3">
+          <div class="carousel-controls d-flex justify-content-center gap-2 mt-3">
             <button
               type="button"
               class="btn btn-volver"
-              data-bs-target="#carrusel"
+              data-bs-target="#tutorGallery"
               data-bs-slide="prev"
+              aria-label="Tutor anterior"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -243,8 +230,9 @@
             <button
               type="button"
               class="btn btn-siguiente"
-              data-bs-target="#carrusel"
+              data-bs-target="#tutorGallery"
               data-bs-slide="next"
+              aria-label="Siguiente tutor"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +244,7 @@
               >
                 <path
                   fill-rule="evenodd"
-                  d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  d="M1 8a7 7 0 1 0 14 0A7 7 0 1 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
                 />
               </svg>
             </button>
@@ -399,7 +387,7 @@
           </section>
         </div>
       </div>
-    </div>
+    </main>
     <footer class="bg-primary text-white text-center py-3">
       <p class="mb-0">Diseño de esta página: Fabio Martín Pérez</p>
     </footer>

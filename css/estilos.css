@@ -1,3 +1,4 @@
+/* ===== VARIABLES DE LA PALETA ===== */
 :root {
   /* Primario: morado */
   --bs-primary: #6e256e;
@@ -7,16 +8,26 @@
   --bs-secondary: #aa6c39;
   --bs-secondary-rgb: 170, 108, 57;
 
-  /*Color Terciario*/
+  /* Color Terciario */
   --color-azul: #2e4172;
 
   --bs-link-color: #6e256e;
 }
 
+/* ===== COLORES (utilidades propias) ===== */
 .bg-azul {
   background-color: var(--color-azul);
 }
 
+.text-naranja {
+  color: var(--bs-secondary);
+}
+
+.text-azul {
+  color: var(--color-azul);
+}
+
+/* ===== BOTONES ===== */
 .btn-primary {
   --bs-btn-bg: rgb(73, 3, 77);
   --bs-btn-border-color: #6e256e;
@@ -28,25 +39,41 @@
 
 .btn-secondary {
   --bs-btn-bg: #804f28;
-  --bs-btn-border-color: #804f28;;
+  --bs-btn-border-color: #804f28;
   --bs-btn-hover-bg: #804f28; /* un tono más oscuro del naranja */
   --bs-btn-hover-border-color: #804f28;
 }
 
-/*Le subimos un poco la opacidad a los enlaces del navbar*/
+/* ===== NAVBAR ===== */
+/* Le subimos un poco la opacidad a los enlaces del navbar */
 .navbar[data-bs-theme="dark"] {
-  --bs-navbar-color: rgba(255, 255, 255, 0.7);   /* por defecto es 0.55 */
+  --bs-navbar-color: rgba(255, 255, 255, 0.7); /* por defecto es 0.55 */
 }
 
+.buscador-navbar {
+  width: 220px;
+}
+
+.titulo-navbar {
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* ===== CARDS ===== */
 .card-terciaria {
   background-color: var(--color-azul);
   color: white;
   border-color: var(--color-azul);
 }
 
+/* ===== TUTORES: carrusel y galería ===== */
 .tutor-carousel {
-  max-width: 1020px;
+  max-width: 1440px;
   margin-inline: auto;
+}
+
+.tutor-gallery .carousel-inner {
+  overflow: hidden;
 }
 
 .tutor-card-body {
@@ -59,43 +86,89 @@
   }
 }
 
-.text-naranja {
-  color: var(--bs-secondary);
+/* En pantallas medianas y grandes, las diapositivas se muestran como cuadrícula. */
+@media (min-width: 768px) {
+  .tutor-gallery .carousel-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    overflow: visible;
+    padding: 0.75rem;
+  }
+
+  .tutor-gallery .carousel-item {
+    display: block !important;
+    float: none;
+    width: auto;
+    margin: 0;
+    transform: none !important;
+    transition: none;
+  }
+
+  .tutor-gallery .carousel-controls {
+    display: none !important;
+  }
 }
 
-.text-azul {
-  color: var(--color-azul);
+@media (min-width: 992px) {
+  .tutor-gallery .carousel-inner {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
+/* ===== TIPOGRAFÍAS ===== */
 /* Fuente general */
 body {
-    font-family: 'Hind Madurai', sans-serif;
+  font-family: 'Hind Madurai', sans-serif;
 }
 
 /* Títulos principales */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 /* Subtítulos destacados */
 .subtitulo {
-    font-family: 'Lora', serif;
-    font-style: italic;
+  font-family: 'Lora', serif;
+  font-style: italic;
 }
 
-.titulo-navbar {
-    white-space: nowrap;
-    z-index: 1;
-}
-
+/* ===== BANNER ===== */
 .banner {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .banner img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== FORMULARIO PARA LA BÚSQUEDA DE CURSOS ===== */
+.form-adorn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.form-adorn:focus-within {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.form-adorn-icon {
+  display: flex;
+  align-items: center;
+  color: var(--bs-secondary-color);
+}
+
+.form-ghost {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
 }
