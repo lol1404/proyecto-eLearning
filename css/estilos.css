@@ -179,3 +179,53 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
 }
+
+/* ===== CARRUSEL DE CURSOS JUNTO A LOS FILTROS ===== */
+.course-carousel {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.course-carousel .carousel-item > .row {
+  margin-inline: 0;
+  padding-inline: 3rem;
+}
+
+.course-carousel .carousel-indicators [data-bs-target] {
+  background-color: var(--bs-primary);
+}
+
+.course-carousel .carousel-control-prev,
+.course-carousel .carousel-control-next {
+  width: 3rem;
+  opacity: 1;
+}
+
+.course-carousel .carousel-control-prev-icon,
+.course-carousel .carousel-control-next-icon {
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  background-size: 55% 55%;
+}
+
+@media (min-width: 992px) {
+  .course-layout #form-busqueda {
+    display: contents;
+  }
+
+  .course-layout #form-busqueda > .form-field,
+  .course-layout #form-busqueda > .d-flex.flex-wrap.gap-2 {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .course-layout #form-busqueda > .d-flex.flex-wrap.align-items-start {
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+  }
+
+  .course-carousel {
+    margin-top: 1.5rem;
+  }
+}
