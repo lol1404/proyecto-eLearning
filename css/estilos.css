@@ -140,6 +140,25 @@ h1, h2, h3, h4, h5, h6 {
   width: 92%;
 }
 
+.chip {
+  /* Normal: fondo transparente, borde y texto morado */
+  --bs-btn-color: rgb(73, 3, 77);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #6e256e;
+
+  /* Hover */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4f1a52;
+  --bs-btn-hover-border-color: #4f1a52;
+
+  /* Seleccionado: relleno morado oscuro */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3a1340;
+  --bs-btn-active-border-color: #3a1340;
+
+  --bs-btn-focus-shadow-rgb: 110, 37, 110;
+}
+
 /* ===== IMAGEN BANNER ===== */
 .banner {
     min-height: 75vh;
