@@ -50,6 +50,10 @@
   --bs-navbar-color: rgba(255, 255, 255, 0.7); /* por defecto es 0.55 */
 }
 
+.navbar .nav-pills {
+  --bs-nav-pills-link-active-bg: var(--color-azul);
+}
+
 .buscador-navbar {
   width: 220px;
 }
