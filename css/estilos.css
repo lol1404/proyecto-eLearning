@@ -51,7 +51,7 @@
 }
 
 .navbar .nav-pills {
-  --bs-nav-pills-link-active-bg: var(--color-azul);
+  --bs-nav-pills-link-active-bg: var(--bs-secondary);
 }
 
 .buscador-navbar {
