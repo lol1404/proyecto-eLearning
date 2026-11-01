@@ -113,29 +113,95 @@
         </div>
 
         <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
-            <input type="checkbox" class="btn-check" id="chip-mates" name="materia" value="matematicas"
-                autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-mates">Matemáticas</label>
-
-            <input type="checkbox" class="btn-check" id="chip-ingles" name="materia" value="ingles" autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-ingles">Inglés</label>
-
-            <input type="checkbox" class="btn-check" id="chip-fisica" name="materia" value="fisica" autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-fisica">Física</label>
-
-            <input type="checkbox" class="btn-check" id="chip-quimica" name="materia" value="quimica"
-                autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-quimica">Química</label>
 
             <input type="checkbox" class="btn-check" id="chip-programacion" name="materia" value="programacion"
                 autocomplete="off">
             <label class="btn btn-outline-primary rounded-pill chip" for="chip-programacion">Programación</label>
 
-            <input type="checkbox" class="btn-check" id="chip-historia" name="materia" value="historia"
+            <input type="checkbox" class="btn-check" id="chip-Diseño" name="materia" value="Diseño" autocomplete="off">
+            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Diseño">Diseño</label>
+
+            <input type="checkbox" class="btn-check" id="chip-Idiomas" name="materia" value="Idiomas"
                 autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-historia">Historia</label>
+            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Idiomas">Idiomas</label>
+
+            <input type="checkbox" class="btn-check" id="chip-Marketing" name="materia" value="Marketing"
+                autocomplete="off">
+            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Marketing">Marketing</label>
+
+            <input type="checkbox" class="btn-check" id="chip-Negocios" name="materia" value="Negocios"
+                autocomplete="off">
+            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Negocios">Negocios</label>
+
+            <input type="checkbox" class="btn-check" id="chip-otros" name="materia" value="otros" autocomplete="off">
+            <label class="btn btn-outline-primary rounded-pill chip" for="chip-otros">Otros</label>
 
         </div>
+
+        <!-- filtro de los cursos -->
+        <div class="border border-primary rounded-3 p-3 mt-4 ms-3 bg-secondary" style="max-width: 20%;">
+            <h4>Filtrar por</h4>
+            <div class="form-field mt-4">
+                <p>Temática</p>
+
+                <div class="form-check">
+                    <input type="checkbox" id="tematica-programacion" class="form-check-input" name="tematica"
+                        value="programacion" />
+                    <label class="form-check-label" for="tematica-programacion">Programación</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="tematica-diseno" class="form-check-input" name="tematica"
+                        value="diseno" />
+                    <label class="form-check-label" for="tematica-diseno">Diseño</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="tematica-idiomas" class="form-check-input" name="tematica"
+                        value="idiomas" />
+                    <label class="form-check-label" for="tematica-idiomas">Idiomas</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="tematica-marketing" class="form-check-input" name="tematica"
+                        value="marketing" />
+                    <label class="form-check-label" for="tematica-marketing">Marketing</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="tematica-negocios" class="form-check-input" name="tematica"
+                        value="negocios" />
+                    <label class="form-check-label" for="tematica-negocios">Negocios</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="tematica-otros" class="form-check-input" name="tematica" value="otros" />
+                    <label class="form-check-label" for="tematica-otros">Otros</label>
+                </div>
+            </div>
+
+
+            <div class="form-field mt-4">
+                <p>Nivel</p>
+
+                <div class="form-check">
+                    <input type="checkbox" id="nivel-basico" class="form-check-input" name="nivel" value="basico" />
+                    <label class="form-check-label" for="nivel-basico">Básico</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="nivel-intermedio" class="form-check-input" name="nivel"
+                        value="intermedio" />
+                    <label class="form-check-label" for="nivel-intermedio">Intermedio</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="nivel-avanzado" class="form-check-input" name="nivel" value="avanzado" />
+                    <label class="form-check-label" for="nivel-avanzado">Avanzado</label>
+                </div>
+            </div>
+        </div>
+
     </form>
 
 
