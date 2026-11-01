@@ -151,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: .5rem;
+  border-radius: 50rem;
 }
 
 .form-adorn:focus-within {
@@ -171,4 +172,14 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   padding: 0;
   color: inherit;
+}
+
+.buscador-flotante {
+  position: relative;  /* necesario para que z-index funcione */
+  z-index: 2;          /* lo pone por encima del hero */
+  margin-top: -1rem; /* cuanto se mete en el hero; ajústalo a tu gusto */
+}
+
+.buscador-flotante .form-adorn {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
