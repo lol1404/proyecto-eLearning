@@ -72,48 +72,8 @@
   margin-inline: auto;
 }
 
-.tutor-gallery .carousel-inner {
-  overflow: hidden;
-}
-
 .tutor-card-body {
-  height: 7rem;
-}
-
-@media (max-width: 767.98px) {
-  .tutor-card-body {
-    height: 8rem;
-  }
-}
-
-/* En pantallas medianas y grandes, las diapositivas se muestran como cuadrícula. */
-@media (min-width: 768px) {
-  .tutor-gallery .carousel-inner {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    overflow: visible;
-    padding: 0.75rem;
-  }
-
-  .tutor-gallery .carousel-item {
-    display: block !important;
-    float: none;
-    width: auto;
-    margin: 0;
-    transform: none !important;
-    transition: none;
-  }
-
-  .tutor-gallery .carousel-controls {
-    display: none !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .tutor-gallery .carousel-inner {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  min-height: 9rem;
 }
 
 /* ===== TIPOGRAFÍAS ===== */
