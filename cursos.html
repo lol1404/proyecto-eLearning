@@ -99,238 +99,607 @@
         </div>
     </section>
 
-    <div class="course-layout d-flex flex-column flex-lg-row flex-wrap align-items-start gap-4">
-    <form action="/buscar" method="get" id="form-busqueda">
-        <div class="form-field mx-auto buscador-flotante">
-            <label class="form-control form-adorn">
-                <div class="form-adorn-icon" aria-hidden="true">
-                    <i class="bi bi-search"></i>
-                </div>
-                <input type="search" class="form-ghost" placeholder="Buscar...">
-            </label>
-        </div>
 
-        <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
 
-            <input type="checkbox" class="btn-check" id="chip-programacion" name="materia" value="programacion"
-                autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-programacion">Programación</label>
 
-            <input type="checkbox" class="btn-check" id="chip-Diseño" name="materia" value="Diseño" autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Diseño">Diseño</label>
 
-            <input type="checkbox" class="btn-check" id="chip-Idiomas" name="materia" value="Idiomas"
-                autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Idiomas">Idiomas</label>
-
-            <input type="checkbox" class="btn-check" id="chip-Marketing" name="materia" value="Marketing"
-                autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Marketing">Marketing</label>
-
-            <input type="checkbox" class="btn-check" id="chip-Negocios" name="materia" value="Negocios"
-                autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-Negocios">Negocios</label>
-
-            <input type="checkbox" class="btn-check" id="chip-otros" name="materia" value="otros" autocomplete="off">
-            <label class="btn btn-outline-primary rounded-pill chip" for="chip-otros">Otros</label>
-
-        </div>
-
-        <!-- filtro de los cursos -->
-        <div class="d-flex flex-wrap align-items-start gap-4 mt-4 ms-3">
-            <div class="bg-form-adorn border border-1 rounded-3 p-3" style="width: 100%; max-width: 320px;">
-                <h4>Filtrar por</h4>
-                <div class="form-field mt-4">
-                    <p>Temática</p>
-
-                    <div class="form-check">
-                        <input type="checkbox" id="tematica-programacion" class="form-check-input" name="tematica"
-                            value="programacion" />
-                        <label class="form-check-label" for="tematica-programacion">Programación</label>
+    <div class="layout-cursos d-flex flex-column flex-lg-row flex-wrap align-items-start gap-4">
+        <form action="/buscar" method="get" id="form-busqueda">
+            <div class="form-field mx-auto buscador-flotante">
+                <label class="form-control form-adorn">
+                    <div class="form-adorn-icon" aria-hidden="true">
+                        <i class="bi bi-search"></i>
                     </div>
+                    <input type="search" class="form-ghost" placeholder="Buscar...">
+                </label>
+            </div>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="tematica-diseno" class="form-check-input" name="tematica"
-                            value="diseno" />
-                        <label class="form-check-label" for="tematica-diseno">Diseño</label>
-                    </div>
+            <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
 
-                    <div class="form-check">
-                        <input type="checkbox" id="tematica-idiomas" class="form-check-input" name="tematica"
-                            value="idiomas" />
-                        <label class="form-check-label" for="tematica-idiomas">Idiomas</label>
-                    </div>
+                <input type="checkbox" class="btn-check" id="chip-programacion" name="materia" value="programacion"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary rounded-pill chip" for="chip-programacion">Programación</label>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="tematica-marketing" class="form-check-input" name="tematica"
-                            value="marketing" />
-                        <label class="form-check-label" for="tematica-marketing">Marketing</label>
-                    </div>
+                <input type="checkbox" class="btn-check" id="chip-Diseño" name="materia" value="Diseño"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary rounded-pill chip" for="chip-Diseño">Diseño</label>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="tematica-negocios" class="form-check-input" name="tematica"
-                            value="negocios" />
-                        <label class="form-check-label" for="tematica-negocios">Negocios</label>
-                    </div>
+                <input type="checkbox" class="btn-check" id="chip-Idiomas" name="materia" value="Idiomas"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary rounded-pill chip" for="chip-Idiomas">Idiomas</label>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="tematica-otros" class="form-check-input" name="tematica"
-                            value="otros" />
-                        <label class="form-check-label" for="tematica-otros">Otros</label>
-                    </div>
-                </div>
+                <input type="checkbox" class="btn-check" id="chip-Marketing" name="materia" value="Marketing"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary rounded-pill chip" for="chip-Marketing">Marketing</label>
+
+                <input type="checkbox" class="btn-check" id="chip-Negocios" name="materia" value="Negocios"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary rounded-pill chip" for="chip-Negocios">Negocios</label>
+
+                <input type="checkbox" class="btn-check" id="chip-otros" name="materia" value="otros"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary rounded-pill chip" for="chip-otros">Otros</label>
+
+            </div>
 
 
-                <div class="form-field mt-4">
-                    <p>Nivel</p>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="nivel-basico" class="form-check-input" name="nivel" value="basico" />
-                        <label class="form-check-label" for="nivel-basico">Básico</label>
-                    </div>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="nivel-intermedio" class="form-check-input" name="nivel"
-                            value="intermedio" />
-                        <label class="form-check-label" for="nivel-intermedio">Intermedio</label>
-                    </div>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="nivel-avanzado" class="form-check-input" name="nivel"
-                            value="avanzado" />
-                        <label class="form-check-label" for="nivel-avanzado">Avanzado</label>
+            <!-- filtro de los cursos -->
+            <div class="d-flex flex-wrap align-items-start gap-4 mt-4 ms-3 container-sm mb-2">
+                <div class="bg-form-adorn border border-1 rounded-3 p-3" style="width: 100%; max-width: 320px;">
+
+                    <!-- Cabecera: desplegable por debajo de lg, título normal desde lg -->
+                    <h4 class="d-none d-lg-block">Filtrar por</h4>
+
+                    <button class="btn btn-primary w-100 d-lg-none d-flex justify-content-between align-items-center"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#filtroCursos" aria-expanded="false"
+                        aria-controls="filtroCursos">
+                        Filtrar por
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <!-- Contenido: colapsado por debajo de lg, siempre visible desde lg -->
+                    <div class="collapse d-lg-block" id="filtroCursos">
+
+                        <div class="collapse d-md-block" id="filtroCursos">
+
+                            <div class="form-field mt-4">
+                                <p>Temática</p>
+                                <!-- ...tus form-check de temática, sin cambios... -->
+                                <div class="form-check">
+                                    <input type="checkbox" id="tematica-programacion" class="form-check-input"
+                                        name="tematica" value="programacion" />
+                                    <label class="form-check-label" for="tematica-programacion">Programación</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="tematica-diseno" class="form-check-input" name="tematica"
+                                        value="diseno" />
+                                    <label class="form-check-label" for="tematica-diseno">Diseño</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="tematica-idiomas" class="form-check-input"
+                                        name="tematica" value="idiomas" />
+                                    <label class="form-check-label" for="tematica-idiomas">Idiomas</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="tematica-marketing" class="form-check-input"
+                                        name="tematica" value="marketing" />
+                                    <label class="form-check-label" for="tematica-marketing">Marketing</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="tematica-negocios" class="form-check-input"
+                                        name="tematica" value="negocios" />
+                                    <label class="form-check-label" for="tematica-negocios">Negocios</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="tematica-otros" class="form-check-input" name="tematica"
+                                        value="otros" />
+                                    <label class="form-check-label" for="tematica-otros">Otros</label>
+                                </div>
+                            </div>
+
+                            <div class="form-field mt-4">
+                                <p>Nivel</p>
+                                <!-- ...tus form-check de nivel, sin cambios... -->
+                                <div class="form-check">
+                                    <input type="checkbox" id="nivel-basico" class="form-check-input" name="nivel"
+                                        value="basico" />
+                                    <label class="form-check-label" for="nivel-basico">Básico</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="nivel-intermedio" class="form-check-input" name="nivel"
+                                        value="intermedio" />
+                                    <label class="form-check-label" for="nivel-intermedio">Intermedio</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input type="checkbox" id="nivel-avanzado" class="form-check-input" name="nivel"
+                                        value="avanzado" />
+                                    <label class="form-check-label" for="nivel-avanzado">Avanzado</label>
+                                </div>
+                            </div>
+
+                            <button type="reset" class="btn btn-primary d-block mx-auto mt-4">Limpiar</button>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
 
 
-
-
-
-    <div id="carouselMultiple" class="carousel slide course-carousel" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
+        <div class="contenido-cursos mt-4">
+            <!-- Carrusel para móvil: una tarjeta por slide -->
+            <div id="carouselXs" class="carousel slide course-carousel d-md-none" data-bs-ride="carousel"
+                data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 1" loading="lazy">
                             <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                                <h4 class="card-title">Curso 1</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
                             </div>
                         </article>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 2" loading="lazy">
                             <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                                <h4 class="card-title">Curso 2</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
                             </div>
                         </article>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 3" loading="lazy">
                             <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                                <h4 class="card-title">Curso 3</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 4" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Curso 4</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 5" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Curso 5</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 6" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Curso 6</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 7" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Curso 7</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 8" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Curso 8</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-item">
+                        <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                class="card-img-top" alt="Imagen del Curso 9" loading="lazy">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title">Curso 9</h4>
+                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable
+                                </p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir al curso</a>
                             </div>
                         </article>
                     </div>
                 </div>
+                <div class="carousel-indicators position-static mt-3 mb-0">
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselXs" data-bs-slide-to="8"
+                        aria-label="Slide 9"></button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselXs"
+                    data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Anterior</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselXs"
+                    data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Siguiente</span></button>
             </div>
-            <div class="carousel-item">
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+
+            <!-- Carrusel para tablet y escritorio pequeño: dos tarjetas por slide -->
+            <div id="carouselMd" class="carousel slide course-carousel d-none d-md-block d-xl-none"
+                data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 1" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 1</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 2" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 2</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 3" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 3</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 4" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 4</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 5" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 5</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 6" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 6</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 7" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 7</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 8" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 8</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-6 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 9" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 9</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="carousel-indicators position-static mt-3 mb-0">
+                    <button type="button" data-bs-target="#carouselMd" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselMd" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselMd" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselMd" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselMd" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMd"
+                    data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Anterior</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMd"
+                    data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Siguiente</span></button>
             </div>
-            <div class="carousel-item">
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+
+            <!-- Carrusel para pantallas grandes: tres tarjetas por slide -->
+            <div id="carouselXl" class="carousel slide course-carousel d-none d-xl-block" data-bs-ride="carousel"
+                data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 1" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 1</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 2" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 2</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 3" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 3</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 4" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 4</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 5" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 5</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 6" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 6</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <article class="card h-100">
-                            <img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg" class="card-img-top" alt="Imagen del curso">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">Curso</h4>
-                                <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso cursable</p>
-                                <a href="#" class="btn btn-primary mt-auto">Ir al curso</a>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 7" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 7</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 8" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 8</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-4 d-flex">
+                                <article class="card h-100"><img src="img/Gemini_Generated_Image_cpaglwcpaglwcpag.jpeg"
+                                        class="card-img-top" alt="Imagen del Curso 9" loading="lazy">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Curso 9</h4>
+                                        <p class="card-text">Esto es un curso muy curso que sirve para cursar el curso
+                                            cursable</p><a href="detallesCursos.html" class="btn btn-curso mt-auto">Ir
+                                            al curso</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="carousel-indicators position-static mt-3 mb-0">
+                    <button type="button" data-bs-target="#carouselXl" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselXl" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselXl" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselXl"
+                    data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Anterior</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselXl"
+                    data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Siguiente</span></button>
             </div>
         </div>
-        <div class="carousel-indicators position-static mt-3 mb-0">
-            <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselMultiple" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMultiple" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselMultiple" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
+
     </div>
+
+
+
+
+    <h2 class="text-center mb-4">Cursos Disponibles:</h2>
+    <div class="row justify-content-center mx-0">
+        <div class="col-12 col-md-9 border rounded-3 overflow-hidden mb-5 p-0">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <table class="table table-striped mb-0">
+                <thead>
+                    <tr>
+                        <th scope="col">curso</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">nivel</th>
+                        <th scope="col">duración</th>
+                        <th scope="col">precio</th>
+                        <th scope="col">Inscribirse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">curso 1</th>
+                        <td>programación</td>
+                        <td>intermedio</td>
+                        <td>10 horas</td>
+                        <td>99.99€</td>
+                        <td><a href="detallesCursos.html" class="btn btn-primary">Inscribirse</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">curso 2</th>
+                        <td>diseño</td>
+                        <td>avanzado</td>
+                        <td>20 horas</td>
+                        <td>149.99€</td>
+                        <td><a href="detallesCursos.html" class="btn btn-primary">Inscribirse</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">curso 3</th>
+                        <td>marketing</td>
+                        <td>avanzado</td>
+                        <td>30 horas</td>
+                        <td>199.99€</td>
+                        <td><a href="detallesCursos.html" class="btn btn-primary">Inscribirse</a></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">curso 4</th>
+                        <td>negocios</td>
+                        <td>intermedio</td>
+                        <td>15 horas</td>
+                        <td>129.99€</td>
+                        <td><a href="detallesCursos.html" class="btn btn-primary">Inscribirse</a></td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+                </table>
+            </div>
+        </div>
     </div>
 
 

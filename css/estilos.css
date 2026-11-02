@@ -181,18 +181,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===== CARRUSEL DE CURSOS JUNTO A LOS FILTROS ===== */
-.course-carousel {
-  flex: 1 1 0;
+.btn-curso {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgb(73, 3, 77);
+  --bs-btn-border-color: #6e256e;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4f1a52;
+  --bs-btn-hover-border-color: #4f1a52;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3a1340;
+  --bs-btn-active-border-color: #3a1340;
+  --bs-btn-focus-shadow-rgb: 110, 37, 110;
+}
+
+.contenido-cursos {
+  width: 100%;
   min-width: 0;
+}
+
+.course-carousel {
+  width: 100%;
+  min-width: 0;
+  padding-inline: 3rem;
 }
 
 .course-carousel .carousel-item > .row {
   margin-inline: 0;
-  padding-inline: 3rem;
 }
 
 .course-carousel .carousel-indicators [data-bs-target] {
-  background-color: var(--bs-primary);
+  background-color: rgb(73, 3, 77);
 }
 
 .course-carousel .carousel-control-prev,
@@ -203,29 +221,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-carousel .carousel-control-prev-icon,
 .course-carousel .carousel-control-next-icon {
-  border-radius: 50%;
-  background-color: var(--bs-primary);
-  background-size: 55% 55%;
+  filter: invert(1) grayscale(100);
 }
 
 @media (min-width: 992px) {
-  .course-layout #form-busqueda {
+  .layout-cursos #form-busqueda {
     display: contents;
   }
 
-  .course-layout #form-busqueda > .form-field,
-  .course-layout #form-busqueda > .d-flex.flex-wrap.gap-2 {
+  .layout-cursos #form-busqueda > .d-flex.flex-wrap.gap-2 {
     flex: 0 0 100%;
     width: 100%;
   }
 
-  .course-layout #form-busqueda > .d-flex.flex-wrap.align-items-start {
+  .layout-cursos #form-busqueda > .form-field {
+    flex: 0 0 92%;
+    width: 92%;
+  }
+
+  .layout-cursos #form-busqueda > .d-flex.flex-wrap.align-items-start {
     flex: 0 0 320px;
     width: 320px;
     max-width: 320px;
   }
 
-  .course-carousel {
-    margin-top: 1.5rem;
+  .contenido-cursos {
+    flex: 1 1 0;
   }
 }
