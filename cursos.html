@@ -103,8 +103,9 @@
 
 
 
-    <div class="layout-cursos d-flex flex-column flex-lg-row flex-wrap align-items-start gap-4">
-        <form action="/buscar" method="get" id="form-busqueda">
+    <div class="layout-cursos container-fluid">
+        <form action="/buscar" method="get" id="form-busqueda" class="row g-4">
+            <div class="col-12">
             <div class="form-field mx-auto buscador-flotante">
                 <label class="form-control form-adorn">
                     <div class="form-adorn-icon" aria-hidden="true">
@@ -113,7 +114,9 @@
                     <input type="search" class="form-ghost" placeholder="Buscar...">
                 </label>
             </div>
+            </div>
 
+            <div class="col-12">
             <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
 
                 <input type="checkbox" class="btn-check" id="chip-programacion" name="materia" value="programacion"
@@ -141,13 +144,14 @@
                 <label class="btn btn-outline-primary rounded-pill chip" for="chip-otros">Otros</label>
 
             </div>
+            </div>
 
 
 
 
 
             <!-- filtro de los cursos -->
-            <div class="d-flex flex-wrap align-items-start gap-4 mt-4 ms-3 container-sm mb-2">
+            <div class="col-12 col-lg-3 mt-4 mb-2">
                 <div class="bg-form-adorn border border-1 rounded-3 p-3" style="width: 100%; max-width: 320px;">
 
                     <!-- Cabecera: desplegable por debajo de lg, título normal desde lg -->
@@ -234,10 +238,8 @@
                     </div>
                 </div>
             </div>
-        </form>
 
-
-        <div class="contenido-cursos mt-4">
+        <div class="col-12 col-lg-9 contenido-cursos mt-4">
             <!-- Carrusel para móvil: una tarjeta por slide -->
             <div id="carouselXs" class="carousel slide course-carousel d-md-none" data-bs-ride="carousel"
                 data-bs-interval="5000">
@@ -637,6 +639,8 @@
                         class="visually-hidden">Siguiente</span></button>
             </div>
         </div>
+
+        </form>
 
     </div>
 

@@ -195,7 +195,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contenido-cursos {
-  width: 100%;
   min-width: 0;
 }
 
@@ -222,30 +221,4 @@ h1, h2, h3, h4, h5, h6 {
 .course-carousel .carousel-control-prev-icon,
 .course-carousel .carousel-control-next-icon {
   filter: invert(1) grayscale(100);
-}
-
-@media (min-width: 992px) {
-  .layout-cursos #form-busqueda {
-    display: contents;
-  }
-
-  .layout-cursos #form-busqueda > .d-flex.flex-wrap.gap-2 {
-    flex: 0 0 100%;
-    width: 100%;
-  }
-
-  .layout-cursos #form-busqueda > .form-field {
-    flex: 0 0 92%;
-    width: 92%;
-  }
-
-  .layout-cursos #form-busqueda > .d-flex.flex-wrap.align-items-start {
-    flex: 0 0 320px;
-    width: 320px;
-    max-width: 320px;
-  }
-
-  .contenido-cursos {
-    flex: 1 1 0;
-  }
 }
